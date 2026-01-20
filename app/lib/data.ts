@@ -1,4 +1,4 @@
-import postgres from 'postgres';
+import postgres from 'postgres'; // PostgreSQL 데이터베이스에 연결하기 위한 설정 코드
 import {
   CustomerField,
   CustomersTableType,
@@ -9,7 +9,7 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
-const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' }); // PostgreSQL 데이터베이스에 연결하기 위한 설정 코드
 
 export async function fetchRevenue() {
   try {
